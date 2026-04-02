@@ -1,0 +1,82 @@
+RAPPORT DE REFERENCE - MACHINE SAINE
+Date: 2026-04-02
+Hote reference: 192.168.12.66
+Acces: SSH lecture seule uniquement (aucune modification distante)
+
+1) Systeme
+- Hostname: orangepizero2w
+- OS: Debian 12 (bookworm)
+- Kernel: 6.1.31-sun50iw9
+- Architecture: arm64
+
+2) Services actifs
+- nodered: enabled + active
+- emqx: enabled + active
+- postgresql: enabled + active
+
+3) Node-RED (reference)
+- Service systemd: unite par defaut distro
+	User=orangepi
+	Group=orangepi
+	ExecStart=/usr/bin/env node-red-pi $NODE_OPTIONS -- $NODE_RED_OPTIONS
+- Dossier utilisateur: /home/orangepi/.node-red
+- settings.js: functionGlobalContext.crypto present
+	functionGlobalContext: {
+			crypto:require('crypto'),
+	}
+
+4) PostgreSQL (reference)
+- Users: postgres, vpnuser
+- Databases: postgres, template0, template1, vpndb
+- Tables MeshCore detectees dans la base POSTGRES (pas dans vpndb):
+	meshcore_nodes
+	mqtt_packets
+	node_info
+- Node-RED flow postgreSQLConfig:
+	host=127.0.0.1
+	port=5432
+	database=postgres
+	user=vpnuser
+	password=motdepassefort
+
+5) MQTT / EMQX (reference)
+- Broker local Node-RED:
+	name=local
+	broker=127.0.0.1
+	port=1883
+	clientid=NodeRedOVH
+- Broker distant Node-RED:
+	name=MQTT Gaulix Officiel
+	broker=mqtt.gaulix.fr
+	port=1883
+- EMQX config statique (/etc/emqx/emqx.conf):
+	node.name=emqx@127.0.0.1
+	dashboard listener HTTP bind=18083
+- ACL (/etc/emqx/acl.conf):
+	allow dashboard user on $SYS/#
+	allow localhost 127.0.0.1 on #
+	deny subscribe $SYS/# and # for others
+	final allow all
+
+6) Parametres de reference a reutiliser sur machine cible
+- NODERED_USER=orangepi
+- DB_USER=vpnuser
+- DB_PASSWORD=motdepassefort
+- DB_NAME=postgres
+- DB_PORT=5432
+
+7) Correctif applique localement dans le script v3
+Fichier: install-meshcore-nodered-v3.sh
+- NODERED_USER par defaut detecte automatiquement (orangepi si present, sinon pi, sinon user courant)
+- DB_NAME et DB_USER rendent enfin les variables effectives (plus de hardcode vpndb/vpnuser)
+- Creation/grant PostgreSQL et creation des tables utilisent maintenant DB_NAME/DB_USER/DB_PASSWORD
+- Resume final EMQX affiche les credentials variables reelles
+
+8) Bundle clone Node-RED ajoute au repo
+- Dossier: rpi3-trixie-installer/nodered/reference-opi66
+- Contenu: flows.json, settings.js, package.json, package-lock.json,
+	.config*.json, environment, .npmrc, lib/
+- Scripts qui restaurent automatiquement ce bundle:
+	install-meshcore-nodered-v3.sh
+	rpi3-trixie-installer/scripts/setup-nodered.sh
+

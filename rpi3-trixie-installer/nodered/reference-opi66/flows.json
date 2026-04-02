@@ -1,0 +1,2263 @@
+[
+    {
+        "id": "e13b83c7368ba830",
+        "type": "tab",
+        "label": "Meshcore",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c11ebd01cc2f59d8",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "info bridge lite",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b57c83819197ff45",
+            "e240be340fd2ca48",
+            "604f780c9dd2e367",
+            "7574891d9286fac2",
+            "d6e6b0febcd39a4b",
+            "92276ef0266af99e",
+            "f66aa9df3f524b78",
+            "ad14655f2e7e1455",
+            "2a1370fcc1aa6220",
+            "964693291ac0810b",
+            "bb5882f9f137ca3c",
+            "f8b9c0eb807fe9c3"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1172,
+        "h": 162
+    },
+    {
+        "id": "89a8a899c2c8087a",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "Couplage des passerelles",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "63c6559e47e4b451",
+            "55dc263f76666a59",
+            "61308c400f27e26b",
+            "b624fd401375d991",
+            "8ec7a6a5d1d717df",
+            "5cdbdd7ccfe2b9c1"
+        ],
+        "x": 14,
+        "y": 199,
+        "w": 872,
+        "h": 162
+    },
+    {
+        "id": "758b1a5802a81eee",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "Encodage Meshcore",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6a5bb05c2bd7f8d4",
+            "e40295cc42149c54",
+            "cd9d6e61f569848d",
+            "a28aa22f95f720e4",
+            "fd6125f4d12accdf",
+            "25592a125a145995",
+            "7ceccc51bdd7215a",
+            "ef355e1e034cfbf5",
+            "54d283635aca8abc",
+            "953c401923f93a3e",
+            "6c4e87c2f55837b3",
+            "d51a05805862264d"
+        ],
+        "x": 14,
+        "y": 379,
+        "w": 872,
+        "h": 282
+    },
+    {
+        "id": "76e9c342e92e1a92",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "Décodage meshcore ",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "66747bb4b5db3679",
+            "4f9efb037f6c7a4a",
+            "ce0d51437911a02d",
+            "50b565b3c571ce02",
+            "fc49667e4570b3ad",
+            "031f81bfb493004a",
+            "7ca938cce11cc6fb",
+            "94677770205b21b0",
+            "cf72e11f3f108da7",
+            "b62adff157413344",
+            "276c02f018943959",
+            "96cf00abe0532ab7",
+            "394e012eb9681414",
+            "112204b6c0756bd7",
+            "3f6e0c1b43032ffe",
+            "5798d97878214395",
+            "eb488e2140d96787",
+            "7e1f2e49ddcf4041",
+            "c7486c4dbb2692b9",
+            "a8eb5097c31188c5"
+        ],
+        "x": 14,
+        "y": 679,
+        "w": 1172,
+        "h": 322
+    },
+    {
+        "id": "4720e4a7f45d6372",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "Visu messages texte",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "995bbe0cee7e0c15",
+            "02ff0df846bfbd32",
+            "11dbf80e5620c39b",
+            "7715173fa3159226",
+            "07b25119a866d094",
+            "94592a21ab692b0a",
+            "2f73e1fd2c710acd",
+            "d525674661e6f645",
+            "8071860f75759035",
+            "44fa6d21f78b29c2",
+            "9af6b6a455ed5be8",
+            "07bc71dcdaeda32f",
+            "9110e591f2514122",
+            "df07b29cf0134f69",
+            "81f9413b5864d861",
+            "67779bbb7b93fbc2",
+            "a709c52f52ba64fb",
+            "5186175428a87d42",
+            "4142deb6febf1856",
+            "5b8bb76d93487069",
+            "0a3b27fd17e27642",
+            "1c9087e43fe02fc1",
+            "d4a4e4bae405fc47",
+            "f4865337c0f89f7c",
+            "ff2db218a84d8416",
+            "2d110d3b93df5806"
+        ],
+        "x": 14,
+        "y": 1019,
+        "w": 1172,
+        "h": 342
+    },
+    {
+        "id": "82f3d4dde002607d",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "timestamp pour horodater les messages",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1874aafdd0637e5d",
+            "df9af00c6baa5689",
+            "96285def216df1da",
+            "8899e5f89e40567d"
+        ],
+        "x": 914,
+        "y": 379,
+        "w": 272,
+        "h": 282
+    },
+    {
+        "id": "22a4358ca5184029",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "import gaulix local",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "997cc33434863532",
+            "a695dbeff5ba4e35"
+        ],
+        "x": 914,
+        "y": 199,
+        "w": 272,
+        "h": 162
+    },
+    {
+        "id": "4340707a219690e8",
+        "type": "group",
+        "z": "e13b83c7368ba830",
+        "name": "world map",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6431b05a3456e0c0",
+            "28088ea40fd74a62",
+            "745d2866de614e05",
+            "62fcde37197af89b",
+            "d285a222faf83d2d",
+            "8e4a09c901f60140",
+            "7d4d06f2108b8159",
+            "18a9a1e715c20278",
+            "worldmap-node"
+        ],
+        "x": 14,
+        "y": 1379,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "57c4cff541230e44",
+        "type": "mqtt-broker",
+        "name": "local",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "NodeRedOVH",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d944b96a0dea644f",
+        "type": "mqtt-broker",
+        "name": "MQTT Gaulix Officiel",
+        "broker": "mqtt.gaulix.fr",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "64f2d453b8bacbf7",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "30",
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": "30000",
+        "connectionTimeoutFieldType": "num",
+        "user": "vpnuser",
+        "userFieldType": "str",
+        "password": "motdepassefort",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "1d4f71aa1d1079ce",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "14d1f19643c15c39",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "915bbb13b7b1042f",
+        "type": "ui-page",
+        "name": "Gestion",
+        "ui": "1d4f71aa1d1079ce",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "14d1f19643c15c39",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "53771198aef5b14a",
+        "type": "ui-group",
+        "name": "Messages",
+        "page": "915bbb13b7b1042f",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b57c83819197ff45",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "",
+        "topic": "meshcore/gateway/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "e240be340fd2ca48",
+                "7574891d9286fac2"
+            ]
+        ]
+    },
+    {
+        "id": "e240be340fd2ca48",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "604f780c9dd2e367",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7574891d9286fac2",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "function 1",
+        "func": "if (typeof msg.payload === \"string\") {\n    msg.payload = {\n        data: msg.payload\n    };\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "604f780c9dd2e367",
+                "2a1370fcc1aa6220"
+            ]
+        ]
+    },
+    {
+        "id": "d6e6b0febcd39a4b",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "decodage advert ",
+        "func": "// Sortie 1 : adverts MeshCore décodés\n// Sortie 2 : tous les autres messages (pass-through)\n\n// Vérification minimale\nif (!msg.payload || typeof msg.payload.data !== \"string\") {\n    return [null, msg];\n}\n\n// Normalisation\nconst hex = msg.payload.data.trim();\n\n// Vérification hex\nif (!/^[0-9a-fA-F]+$/.test(hex)) {\n    return [null, msg];\n}\n\n// Création du buffer AVANT usage\nconst buf = Buffer.from(hex, \"hex\");\n\n// Debug utile (maintenant valide)\n\n// Trame trop courte\nif (buf.length < 40) {\n    return [null, msg];\n}\n\nconst frameType = buf[0];\nconst hopCount = buf[1];\n\n// Détection adverts\nlet advertMode = null;\n\nif (frameType === 0x12) {\n    advertMode = \"zero_hop\";\n} else if (frameType === 0x11) {\n    advertMode = \"flood_routed\";\n} else {\n    return [null, msg];\n}\n\n// Clé publique (32 octets)\nconst publicKey = buf.slice(2, 34).toString(\"hex\");\n\n// Extraction nom ASCII (fin de trame)\nlet name = \"\";\nfor (let i = buf.length - 1; i >= 34; i--) {\n    if (buf[i] >= 0x20 && buf[i] <= 0x7E) {\n        name = String.fromCharCode(buf[i]) + name;\n    } else {\n        break;\n    }\n}\n\n// Message décodé (sortie 1)\nconst out = {\n    payload: {\n        type: \"meshcore_advert\",\n        advert_mode: advertMode,\n        hop: hopCount,\n        public_key: publicKey,\n        name: name || null,\n        raw_length: buf.length\n    }\n};\nout.topic = msg.topic.replace(\"/raw\", \"/decoded\");\nreturn [out, null];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "92276ef0266af99e",
+                "bb5882f9f137ca3c"
+            ],
+            [
+                "f66aa9df3f524b78"
+            ]
+        ]
+    },
+    {
+        "id": "92276ef0266af99e",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "advert ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f66aa9df3f524b78",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "a decoder",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ad14655f2e7e1455",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1110,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2a1370fcc1aa6220",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "santée gateway",
+        "func": "if (msg.topic && msg.topic.includes(\"status\")) {\n    node.send(msg);  // Laisser passer\n} else {\n    node.send([null, msg]);\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 100,
+        "wires": [
+            [
+                "964693291ac0810b"
+            ],
+            [
+                "d6e6b0febcd39a4b",
+                "f8b9c0eb807fe9c3"
+            ]
+        ]
+    },
+    {
+        "id": "964693291ac0810b",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bb5882f9f137ca3c",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "function 3",
+        "func": "if (msg.topic && msg.topic.includes(\"decoded\")) {\n    node.send(msg);  // Laisser passer\n} else {\n    node.send([null, msg]);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 100,
+        "wires": [
+            [
+                "ad14655f2e7e1455"
+            ]
+        ]
+    },
+    {
+        "id": "f8b9c0eb807fe9c3",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "c11ebd01cc2f59d8",
+        "name": "debug 46",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "63c6559e47e4b451",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "",
+        "topic": "meshcore/gateway/CE6E2E22748/raw/tx",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "b624fd401375d991",
+                "5cdbdd7ccfe2b9c1"
+            ]
+        ]
+    },
+    {
+        "id": "55dc263f76666a59",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "",
+        "topic": "meshcore/gateway/CE6E2E22748/sender",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "61308c400f27e26b",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "",
+        "topic": "meshcore/gateway/6C85AAAC85D8/raw/tx",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "55dc263f76666a59",
+                "5cdbdd7ccfe2b9c1"
+            ]
+        ]
+    },
+    {
+        "id": "b624fd401375d991",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "",
+        "topic": "meshcore/gateway/6C85AAAC85D8/sender",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 630,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8ec7a6a5d1d717df",
+        "type": "link in",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "link in 6",
+        "links": [
+            "e40295cc42149c54"
+        ],
+        "x": 345,
+        "y": 280,
+        "wires": [
+            [
+                "b624fd401375d991",
+                "55dc263f76666a59"
+            ]
+        ]
+    },
+    {
+        "id": "5cdbdd7ccfe2b9c1",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "89a8a899c2c8087a",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6a5bb05c2bd7f8d4",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "Trame Chiffrée",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e40295cc42149c54",
+        "type": "link out",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "8ec7a6a5d1d717df"
+        ],
+        "x": 675,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cd9d6e61f569848d",
+        "type": "inject",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "patacouhette",
+        "payloadType": "str",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "54d283635aca8abc"
+            ]
+        ]
+    },
+    {
+        "id": "a28aa22f95f720e4",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "",
+        "topic": "meshcore/bot",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "54d283635aca8abc"
+            ]
+        ]
+    },
+    {
+        "id": "fd6125f4d12accdf",
+        "type": "rbe",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "anti doublons",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "7ceccc51bdd7215a",
+                "ef355e1e034cfbf5"
+            ]
+        ]
+    },
+    {
+        "id": "25592a125a145995",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "",
+        "topic": "meshcore/depuisMeshtastic",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "fd6125f4d12accdf"
+            ]
+        ]
+    },
+    {
+        "id": "7ceccc51bdd7215a",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "function 5",
+        "func": "if (typeof msg.payload === \"string\" && msg.payload.includes(\"MC\")) {\n    // On ne diffuse pas le message\n    return null;\n}\n\n// Sinon, on laisse passer\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "54d283635aca8abc",
+                "d51a05805862264d"
+            ]
+        ]
+    },
+    {
+        "id": "ef355e1e034cfbf5",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "54d283635aca8abc",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "chiffrage sur #frblabla avec timeStamps",
+        "func": "// ===== MeshCore GroupText encoder (Node-RED final) =====\n\n// Node-RED crypto\nconst crypto = global.get('crypto');\n\n// ---------- CONSTANTS ----------\nconst HEADER = 0x15; // Flood + GroupText\nconst PATH_LEN = 0x00;\nconst CHANNEL_HASH = 0x57;\n\nconst ID_HASH = 0x00;\n//const ID_HASH = 0xFD;\n//const SENDER = \"16cham_kazy\";\nconst SENDER = \"Bot_Gaulix\";\n\n// Channel AES key (16 bytes)\nconst AES_KEY = Buffer.from(\"33dfec1c6022b717d941c1b7606915f3\", \"hex\");\n\n// HMAC key = 32 bytes (AES key padded with zeros)\nconst HMAC_KEY = Buffer.alloc(32);\nAES_KEY.copy(HMAC_KEY);\n\n// ---------- INPUT ----------\nif (typeof msg.payload !== \"string\") {\n    node.error(\"msg.payload must be a string\");\n    return null;\n}\n\nconst MESSAGE = msg.payload;\n\n// ---------- CLEAR DATA ----------\n// Timestamp réseau dynamique depuis variable globale (ISO string)\n/*\nlet ts = global.get('unixtime'); \nnode.warn(ts);\nconst tsBuf = Buffer.alloc(4);\ntsBuf.writeUInt32LE(ts);\nnode.warn(tsBuf);\n*/\n\n// Récupérer la date ISO de la variable globale\nlet iso = global.get('unixtime'); // ex: \"2026-01-09T11:10:53.000Z\"\n\n// Convertir en Unix timestamp en secondes\nlet ts = Math.floor(new Date(iso).getTime() / 1000);\n\n// Écrire dans un buffer little-endian\nconst tsBuf = Buffer.alloc(4);\ntsBuf.writeUInt32LE(ts); // little-endian, exactement comme MeshCore\n\n\n\n\nconst clearData = Buffer.concat([\n    //Buffer.from([ID_HASH]),        // 1 octet\n    tsBuf,                         // 4 octets\n    Buffer.from([ID_HASH]),        // 1 octet\n    Buffer.from(SENDER + \": \", \"utf8\"), // sender\n    Buffer.from(MESSAGE, \"utf8\")        // message\n]);\n\n// ---------- AES-128 ECB (MeshCore style) ----------\nfunction aesEncrypt(key, data) {\n    const cipher = crypto.createCipheriv(\"aes-128-ecb\", key, null);\n    cipher.setAutoPadding(false);\n\n    const paddedLen = Math.ceil(data.length / 16) * 16;\n    const padded = Buffer.alloc(paddedLen);\n    data.copy(padded);\n\n    return Buffer.concat([cipher.update(padded), cipher.final()]);\n}\n\nconst ciphertext = aesEncrypt(AES_KEY, clearData);\n\n// ---------- HMAC-SHA256 (truncate 2 bytes) ----------\nconst mac = crypto.createHmac(\"sha256\", HMAC_KEY)\n    .update(ciphertext)\n    .digest()\n    .subarray(0, 2);\n\n// ---------- PAYLOAD ----------\nconst payload = Buffer.concat([\n    mac,\n    ciphertext\n]);\n\n// ---------- FRAME ----------\nconst frame = Buffer.concat([\n    Buffer.from([HEADER]),    // type + route\n    Buffer.from([PATH_LEN]),  // 1\n    //Buffer.from([ID_HASH]),   // path\n    Buffer.from([CHANNEL_HASH]),\n    payload\n]);\n\n// ---------- OUTPUT ----------\nmsg.payload = frame.toString(\"hex\").toUpperCase();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 520,
+        "wires": [
+            [
+                "e40295cc42149c54",
+                "6a5bb05c2bd7f8d4"
+            ]
+        ]
+    },
+    {
+        "id": "953c401923f93a3e",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "chiffrage sur @public avec timeStamps",
+        "func": "// ===== MeshCore GroupText encoder (Node-RED final) =====\n\n// Node-RED crypto\nconst crypto = global.get('crypto');\n\n// ---------- CONSTANTS ----------\nconst HEADER = 0x15; // Flood + GroupText\nconst PATH_LEN = 0x00;\nconst CHANNEL_HASH = 0x11;\n\nconst ID_HASH = 0x00;\n//const ID_HASH = 0xFD;\n//const SENDER = \"16cham_kazy\";\nconst SENDER = \"Bot_Gaulix\";\n\n// Channel AES key (16 bytes)\nconst AES_KEY = Buffer.from(\"8b3387e9c5cdea6ac9e5edbaa115cd72\", \"hex\"); \n\n// HMAC key = 32 bytes (AES key padded with zeros)\nconst HMAC_KEY = Buffer.alloc(32);\nAES_KEY.copy(HMAC_KEY);\n\n// ---------- INPUT ----------\nif (typeof msg.payload !== \"string\") {\n    node.error(\"msg.payload must be a string\");\n    return null;\n}\n\nconst MESSAGE = msg.payload;\n\n// ---------- CLEAR DATA ----------\n// Timestamp réseau dynamique depuis variable globale (ISO string)\n/*\nlet ts = global.get('unixtime'); \nnode.warn(ts);\nconst tsBuf = Buffer.alloc(4);\ntsBuf.writeUInt32LE(ts);\nnode.warn(tsBuf);\n*/\n\n// Récupérer la date ISO de la variable globale\nlet iso = global.get('unixtime'); // ex: \"2026-01-09T11:10:53.000Z\"\n\n// Convertir en Unix timestamp en secondes\nlet ts = Math.floor(new Date(iso).getTime() / 1000);\n\n// Écrire dans un buffer little-endian\nconst tsBuf = Buffer.alloc(4);\ntsBuf.writeUInt32LE(ts); // little-endian, exactement comme MeshCore\n\n\n\n\nconst clearData = Buffer.concat([\n    //Buffer.from([ID_HASH]),        // 1 octet\n    tsBuf,                         // 4 octets\n    Buffer.from([ID_HASH]),        // 1 octet\n    Buffer.from(SENDER + \": \", \"utf8\"), // sender\n    Buffer.from(MESSAGE, \"utf8\")        // message\n]);\n\n// ---------- AES-128 ECB (MeshCore style) ----------\nfunction aesEncrypt(key, data) {\n    const cipher = crypto.createCipheriv(\"aes-128-ecb\", key, null);\n    cipher.setAutoPadding(false);\n\n    const paddedLen = Math.ceil(data.length / 16) * 16;\n    const padded = Buffer.alloc(paddedLen);\n    data.copy(padded);\n\n    return Buffer.concat([cipher.update(padded), cipher.final()]);\n}\n\nconst ciphertext = aesEncrypt(AES_KEY, clearData);\n\n// ---------- HMAC-SHA256 (truncate 2 bytes) ----------\nconst mac = crypto.createHmac(\"sha256\", HMAC_KEY)\n    .update(ciphertext)\n    .digest()\n    .subarray(0, 2);\n\n// ---------- PAYLOAD ----------\nconst payload = Buffer.concat([\n    mac,\n    ciphertext\n]);\n\n// ---------- FRAME ----------\nconst frame = Buffer.concat([\n    Buffer.from([HEADER]),    // type + route\n    Buffer.from([PATH_LEN]),  // 1\n    //Buffer.from([ID_HASH]),   // path\n    Buffer.from([CHANNEL_HASH]),\n    payload\n]);\n\n// ---------- OUTPUT ----------\nmsg.payload = frame.toString(\"hex\").toUpperCase();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "e40295cc42149c54",
+                "6a5bb05c2bd7f8d4"
+            ]
+        ]
+    },
+    {
+        "id": "6c4e87c2f55837b3",
+        "type": "inject",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "un bot qui parle à un autre bot n'importe nawak!!!!",
+        "payloadType": "str",
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "953c401923f93a3e"
+            ]
+        ]
+    },
+    {
+        "id": "d51a05805862264d",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "758b1a5802a81eee",
+        "name": "debug 48",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "66747bb4b5db3679",
+        "type": "exec",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "command": "meshcore-decoder decode",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "MC decodeur générique",
+        "x": 750,
+        "y": 840,
+        "wires": [
+            [
+                "94677770205b21b0"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4f9efb037f6c7a4a",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "inclusion clef par canal",
+        "func": "// 1. Validation du payload\nif (!msg.payload || typeof msg.payload !== 'string') {\n    return null;\n}\n\nconst hexData = msg.payload.trim().toUpperCase();\n\n// Trame hex valide ?\nif (!/^[0-9A-F]+$/.test(hexData) || hexData.length < 6) {\n  //  msg.payload = \"Erreur: Trame hex invalide\";\n  //  return msg;\n}\n\n// 2. Découpage en octets\nconst bytes = hexData.match(/.{2}/g);\n\n// 3. Vérifier le type de message (0x15 = GroupText)\nconst msgType = bytes[0];\nif (msgType !== \"15\") {\n    return null; // pas un GroupText → on ignore silencieusement\n}\n\n// 4. Extraire le RouteType (bits 0–1 de l’octet 1)\nconst routeType = parseInt(bytes[1], 16) & 0x03;\n\n// 5. Extraire le Channel Hash selon le RouteType\nlet channelHash;\n\nswitch (routeType) {\n    case 0x00: // ROUTE_TYPE_FLOOD\n        // 15 00 D9 ...\n        channelHash = bytes[2];\n        break;\n\n    case 0x01: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[3];\n        break;\n\n    case 0x02: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[4];\n        break;\n\n    case 0x03: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[5];\n        break;\n\n    case 0x04: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[6];\n        break;\n\n    case 0x05: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[7];\n        break;\n\n    case 0x06: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[8];\n        break;\n\n    case 0x07: // ROUTE_TYPE_ROUTED\n        // 15 01 FD D9 ...\n        channelHash = bytes[9];\n        break;\n\n    //default:\n       // msg.payload = `Erreur: RouteType non supporté (${routeType})`;\n       // return msg;\n}\n    \n    // Définir la clé en fonction du Channel Hash\n    let key;\n    switch (channelHash) {\n        case 'D9':\n            key = \"9cd8fcf22a47333b591d96a2b848b73f\"; // #test\n            break;\n        case '11':\n            key = \"8b3387e9c5cdea6ac9e5edbaa115cd72\"; // @Public\n            break;\n        case 'CA':\n            key = \"eb50a1bcb3e4e5d7bf69a57c9dada211\"; // #bot\n            break;\n        case '68':\n            key = \"e1ad578d25108e344808f30dfdaaf926\"; // #emergency\n            break;\n        case '3B':\n            key = \"ce51a275a0a0507c43d1651d78292320\"; // #info\n            break;\n        case '78':\n            key = \"7ca4f9aad450fd2a87f308d7c4dd0b4d\"; // #meteo\n            break;\n        case '57':\n            key = \"33dfec1c6022b717d941c1b7606915f3\"; // #frblabla\n            break;\n        //default:\n           // msg.payload = `Erreur: Channel Hash inconnu (${channelHash}).`;\n           // return msg;\n    }\n\n    // Construire la commande\n    //msg.command = `meshcore-decoder decode ${hexData} --key ${key}`;\n    msg.command = `${hexData} --key ${key}`;\n    return msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 900,
+        "wires": [
+            [
+                "50b565b3c571ce02",
+                "ce0d51437911a02d"
+            ]
+        ]
+    },
+    {
+        "id": "ce0d51437911a02d",
+        "type": "exec",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "command": "meshcore-decoder decode",
+        "addpay": "command",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "MC décodeur canaux avec clef",
+        "x": 730,
+        "y": 900,
+        "wires": [
+            [
+                "94677770205b21b0",
+                "7e1f2e49ddcf4041"
+            ],
+            [
+                "c7486c4dbb2692b9"
+            ],
+            [
+                "a8eb5097c31188c5"
+            ]
+        ]
+    },
+    {
+        "id": "50b565b3c571ce02",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 410,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "fc49667e4570b3ad",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "",
+        "topic": "meshcore/channelTest",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1060,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "031f81bfb493004a",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "filtre meshcore/gateway/XXXXXXXXX/raw/rx",
+        "func": "if (msg.topic && /^meshcore\\/gateway\\/[^/]+\\/raw\\/rx$/.test(msg.topic)) {\n    return msg;   // Laisser passer\n} else {\n    return null;  // Bloquer\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "4f9efb037f6c7a4a",
+                "66747bb4b5db3679",
+                "276c02f018943959"
+            ]
+        ]
+    },
+    {
+        "id": "7ca938cce11cc6fb",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "",
+        "topic": "meshcore/gateway/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "57c4cff541230e44",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 840,
+        "wires": [
+            [
+                "031f81bfb493004a"
+            ]
+        ]
+    },
+    {
+        "id": "94677770205b21b0",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "mise en json",
+        "func": "// Récupérer le payload (string)\nconst input = msg.payload;\n\n// Initialiser l'objet JSON de sortie\nconst result = {};\n\n// Analyser le string pour extraire les informations\nconst lines = input.split('\\n');\n\nfor (const line of lines) {\n    // Ignorer les lignes vides ou les séparateurs\n    if (line.trim() === '' || line.includes('===') || line.includes('✅')) {\n        continue;\n    }\n\n    // Extraire les paires clé/valeur\n    const match = line.match(/^(.*?):\\s*(.*)$/);\n    if (match) {\n        const key = match[1].trim();\n        const value = match[2].trim();\n\n        // Nettoyer les valeurs (ex: \"31 → 26 → EC → 86\" devient [\"31\", \"26\", \"EC\", \"86\"])\n        if (key === \"Path\") {\n            result[key] = value.split('→').map(item => item.trim());\n        }\n        // Gérer les cas spéciaux (ex: \"🔒 Encrypted\")\n        else if (value.includes(\"🔒\")) {\n            result[\"Encrypted\"] = true;\n            result[\"Ciphertext\"] = value.replace(\"🔒 Encrypted (no key available)\", \"\").trim();\n        }\n        // Cas standard\n        else {\n            result[key] = value;\n        }\n    }\n}\n\n// Mettre à jour le payload avec le JSON\nmsg.payload = result;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 820,
+        "wires": [
+            [
+                "cf72e11f3f108da7",
+                "b62adff157413344"
+            ]
+        ]
+    },
+    {
+        "id": "cf72e11f3f108da7",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "filtrage canaux connu dechiffré",
+        "func": "// Récupérer le payload (JSON)\nconst payload = msg.payload;\n\n// Liste des Channel Hash autorisés\nconst allowedChannelHashes = [\"D9\", \"11\", \"CA\", \"68\", \"3B\", \"78\", \"57\"];\n\n// Vérifier si le payload est un objet et contient les champs nécessaires\nif (typeof payload === 'object' && payload !== null) {\n    const { \"Channel Hash\": channelHash, Ciphertext: ciphertext } = payload;\n\n    // Si le Channel Hash est dans la liste ET qu'il y a un Ciphertext, on ignore le message\n    if (allowedChannelHashes.includes(channelHash) && ciphertext !== undefined) {\n        return null; // ou return; pour arrêter le traitement\n    }\n}\n\n// Si le message ne correspond pas aux critères, on le laisse passer\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 760,
+        "wires": [
+            [
+                "fc49667e4570b3ad"
+            ]
+        ]
+    },
+    {
+        "id": "b62adff157413344",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "276c02f018943959",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "extract info terminaux",
+        "func": "if (typeof msg.payload !== \"string\") return [null, msg];\n\nconst crypto = global.get(\"crypto\");\nconst frame = Buffer.from(msg.payload, \"hex\");\n\n// ---- Header\nconst header = frame[0];\nlet routeType;\nif (header === 0x11) routeType = \"Flood\";\nelse if (header === 0x12) routeType = \"Direct\";\nelse return [null, msg];\n\n// ---- Message Hash (SHA256 first 4 bytes)\nconst messageHash = crypto\n    .createHash(\"sha256\")\n    .update(frame)\n    .digest()\n    .subarray(0, 4)\n    .toString(\"hex\")\n    .toUpperCase();\n\n// ---- Path\nconst pathLen = frame[1];\nconst buf = frame.slice(2 + pathLen);\n\nlet p = 0;\n\n// ---- Public key (32 bytes)\nconst publicKey = buf.slice(p, p += 32).toString(\"hex\");\n\n// ---- Timestamp (4 bytes, juste après la clé publique)\nconst ts = buf.readUInt32LE(p);\np += 4;\nconst timestamp = new Date(ts * 1000).toISOString();\n//node.warn(`Timestamp décimal: ${ts} -> ${timestamp}`);\n\n// ---- Signature (64 bytes)\nconst signature = buf.slice(p, p += 64).toString(\"hex\");\n\n// ---- AppData Flags / Role (1 byte)\nconst flagsByte = buf[p++];\nconst roleMap = {\n    0x01: \"Chat Node\",\n    0x02: \"Repeater\",\n    0x03: \"Room Server\",\n    0x04: \"Sensor\"\n};\nconst deviceRole = roleMap[flagsByte & 0x0F] ?? \"Unknown\";\n\n// ---- Latitude / Longitude si présents (flags 0x10)\nlet latitude = null, longitude = null;\nif (flagsByte & 0x10) {\n    latitude = buf.readUInt32LE(p) / 1e6;\n    p += 4;\n    longitude = buf.readUInt32LE(p) / 1e6;\n    p += 4;\n}\n\n// ---- Device Name si présent (flags 0x80)\nlet name = null;\nif (flagsByte & 0x80) {\n    name = buf.slice(p).toString(\"utf8\").replace(/\\0/g, \"\");\n}\n\n// ---- Output\nmsg.payload = {\n    \"Message Hash\": messageHash,\n    \"Route Type\": routeType,\n    \"Payload Type\": \"Advert\",\n    \"Total Bytes\": frame.length.toString(),\n    \"Device Role\": deviceRole,\n    \"public_key\": publicKey,\n    \"signature\": signature,\n    \"Device Name\": name,\n    \"Location\": latitude !== null\n        ? { \"latitude\": latitude, \"longitude\": longitude }\n        : null,\n    \"Timestamp\": timestamp\n};\n\nmsg.topic = \"meshcore/compagnon/\" + deviceRole + \"/\" + name;\nreturn [msg, null];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 760,
+        "wires": [
+            [
+                "96cf00abe0532ab7",
+                "112204b6c0756bd7",
+                "5798d97878214395"
+            ]
+        ]
+    },
+    {
+        "id": "96cf00abe0532ab7",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "394e012eb9681414",
+        "type": "comment",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "",
+        "info": "Ta trame (avec tirets pour séparer les champs) :\n12-00-\nD424ECA5F9C8F6C3FEA6AE60FBD9FD5190BB31075CCFB23A680C424021FB8C0F-  // public key (32 bytes)\nAF1D6569F73F91FD88777D8AF938D283EC52E9B6B4058C2E3B444281DA818D2A7579646FFCF23C61B94C69239502C5E564E841E6C8B00F71AE43D8E6C1C64D4B- // signature (64 bytes)\n91-         // role / flags (1 byte)\nDD5F0991-   // timestamp (4 bytes, little endian)\n81CCBD02-   // latitude (4 bytes, uint32 LE, fixed point 1e6)\n5E1C0600-   // longitude (4 bytes, uint32 LE, fixed point 1e6)\n31364348414D6E77E298A0EFB88F476F75726F75F09F93  // device name (reste)\n\n1200D424ECA5F9C8F6C3FEA6AE60FBD9FD5190BB31075CCFB23A680C424021FB8C0FAF1D6569F73F91FD88777D8AF938D283EC52E9B6B4058C2E3B444281DA818D2A7579646FFCF23C61B94C69239502C5E564E841E6C8B00F71AE43D8E6C1C64D4B91DD5F099181CCBD025E1C060031364348414D6E77E298A0EFB88F476F75726F75F09F93\n\ngit clone https://github.com/michaelhart/meshcore-decoder\ncd meshcore-decoder\nnpm install\nnpm install -g .",
+        "x": 150,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "112204b6c0756bd7",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d944b96a0dea644f",
+        "x": 410,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3f6e0c1b43032ffe",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 69",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "5798d97878214395",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "function 11",
+        "func": "let p = msg.payload;\nif (!p) return null;\n\nlet loc = p.Location || {};\n\nmsg.query = `\nINSERT INTO meshcore_nodes (\n    public_key,\n    device_name,\n    device_role,\n    signature,\n    latitude,\n    longitude,\n    ts\n)\nVALUES ($1,$2,$3,$4,$5,$6,$7)\n\nON CONFLICT (public_key)\nDO UPDATE SET\n    device_name = COALESCE(EXCLUDED.device_name, meshcore_nodes.device_name),\n    device_role = COALESCE(EXCLUDED.device_role, meshcore_nodes.device_role),\n    signature = COALESCE(EXCLUDED.signature, meshcore_nodes.signature),\n    latitude = COALESCE(EXCLUDED.latitude, meshcore_nodes.latitude),\n    longitude = COALESCE(EXCLUDED.longitude, meshcore_nodes.longitude),\n    ts = COALESCE(EXCLUDED.ts, meshcore_nodes.ts),\n    updated_at = now()\n\nRETURNING public_key;\n`;\n\nmsg.params = [\n    p.public_key ?? null,\n    p[\"Device Name\"] ?? null,\n    p[\"Device Role\"] ?? null,\n    p.signature ?? null,\n    loc.latitude ?? null,\n    loc.longitude ?? null,\n    p.Timestamp ?? null\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 760,
+        "wires": [
+            [
+                "eb488e2140d96787"
+            ]
+        ]
+    },
+    {
+        "id": "eb488e2140d96787",
+        "type": "postgresql",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "64f2d453b8bacbf7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "3f6e0c1b43032ffe"
+            ]
+        ]
+    },
+    {
+        "id": "995bbe0cee7e0c15",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "mise en forme message ",
+        "func": "// Récupérer la sortie de la commande\nconst output = msg.payload;\n\n// Vérifier si c’est un GroupText\nif (!output.includes(\"Payload Type: GroupText\")) {\n    msg.payload = \"pas un groupe\";\n    return; // msg;\n}\n\n// Extraction des champs\nconst channelMatch = output.match(/Channel Hash:\\s*([0-9A-F]{2})/);\nconst senderMatch  = output.match(/Sender:\\s*([^\\n]+)/);\nconst messageMatch = output.match(/Message: ([^\\n]+)/);\n\nif (!senderMatch || !messageMatch || !channelMatch) {\n    msg.payload = \"Erreur: champs MeshCore manquants\";\n    return; // msg;\n}\n\nconst channelHash = channelMatch[1].toUpperCase();\nconst sender      = senderMatch[1].trim();\nconst message     = messageMatch[1].trim();\n\nconst channelMap = {\n    \"D9\": \"#test\",\n    \"11\": \"@Public\",\n    \"CA\": \"#bot\",\n    \"68\": \"#emergency\",\n    \"3B\": \"#info\",\n    \"78\": \"#meteo\",\n    \"57\": \"#frblabla\"\n};\n\n// Résolution du nom du channel\nconst channelName = channelMap[channelHash] || `#unknown(${channelHash})`;\n\n// Reformater le message final\nmsg.payload = `MC${channelName} ${sender} ${message}`;\n\nreturn msg;\n/*\n// Récupérer la sortie de la commande\nconst output = msg.payload;\n\n// Vérifier si la sortie contient \"GroupText\"\nif (output.includes(\"Payload Type: GroupText\")) {\n    // Extraire les informations nécessaires\n    const senderMatch = output.match(/Sender: ([^\\n]+)/);\n    const messageMatch = output.match(/Message: ([^\\n]+)/);\n\n    if (senderMatch && messageMatch) {\n        const sender = senderMatch[1].trim();\n        const message = messageMatch[1].trim();\n\n        // Reformater le message\n        msg.payload = `MC#test ${sender} ${message}`;\n    }\n} else {\n    msg.payload = null; // Garder la sortie originale si ce n'est pas un GroupText\n}\n\nreturn msg;\n*/",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1180,
+        "wires": [
+            [
+                "02ff0df846bfbd32",
+                "11dbf80e5620c39b",
+                "07b25119a866d094",
+                "2f73e1fd2c710acd",
+                "8071860f75759035",
+                "9af6b6a455ed5be8",
+                "9110e591f2514122",
+                "81f9413b5864d861"
+            ]
+        ]
+    },
+    {
+        "id": "02ff0df846bfbd32",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 120,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "11dbf80e5620c39b",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC@Public",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC@Public\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1080,
+        "wires": [
+            [
+                "7715173fa3159226",
+                "4142deb6febf1856"
+            ]
+        ]
+    },
+    {
+        "id": "7715173fa3159226",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/versMeshtasticPublic",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1030,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "07b25119a866d094",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement frblabla",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#frblabla\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "a709c52f52ba64fb"
+            ]
+        ]
+    },
+    {
+        "id": "94592a21ab692b0a",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/versMeshtastic",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1050,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "2f73e1fd2c710acd",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC#emergency",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#emergency\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1160,
+        "wires": [
+            [
+                "d525674661e6f645",
+                "0a3b27fd17e27642"
+            ]
+        ]
+    },
+    {
+        "id": "d525674661e6f645",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/versMeshtasticEMCOM",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1020,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "8071860f75759035",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC#bot",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#bot\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1120,
+        "wires": [
+            [
+                "44fa6d21f78b29c2",
+                "5b8bb76d93487069"
+            ]
+        ]
+    },
+    {
+        "id": "44fa6d21f78b29c2",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/chbot",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1080,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "9af6b6a455ed5be8",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC#info",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#info\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1240,
+        "wires": [
+            [
+                "07bc71dcdaeda32f",
+                "d4a4e4bae405fc47"
+            ]
+        ]
+    },
+    {
+        "id": "07bc71dcdaeda32f",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/chinfo",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1080,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "9110e591f2514122",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC#meteo",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#meteo\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1280,
+        "wires": [
+            [
+                "df07b29cf0134f69",
+                "f4865337c0f89f7c"
+            ]
+        ]
+    },
+    {
+        "id": "df07b29cf0134f69",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/chmeteo",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1070,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "81f9413b5864d861",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "uniquement MC#test",
+        "func": "// Vérifier que le payload est une chaîne\nif (typeof msg.payload !== \"string\") {\n    return null;\n}\n\n// Laisser passer uniquement MC#frblabla\nif (msg.payload.startsWith(\"MC#test\")) {\n    return msg;\n}\n\n// Sinon, on bloque\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1320,
+        "wires": [
+            [
+                "67779bbb7b93fbc2",
+                "ff2db218a84d8416"
+            ]
+        ]
+    },
+    {
+        "id": "67779bbb7b93fbc2",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "topic": "meshcore/chtest",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1080,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "a709c52f52ba64fb",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "forme",
+        "func": "msg.payload = msg.payload.replace(/MC#fr[^ ]*/g, \"MC:\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1200,
+        "wires": [
+            [
+                "94592a21ab692b0a",
+                "1c9087e43fe02fc1"
+            ]
+        ]
+    },
+    {
+        "id": "7e1f2e49ddcf4041",
+        "type": "link out",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "5186175428a87d42"
+        ],
+        "x": 1095,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "5186175428a87d42",
+        "type": "link in",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "link in 1",
+        "links": [
+            "7e1f2e49ddcf4041"
+        ],
+        "x": 55,
+        "y": 1100,
+        "wires": [
+            [
+                "995bbe0cee7e0c15"
+            ]
+        ]
+    },
+    {
+        "id": "997cc33434863532",
+        "type": "mqtt in",
+        "z": "e13b83c7368ba830",
+        "g": "22a4358ca5184029",
+        "name": "ovh Gaulix",
+        "topic": "meshcore/gateway/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d944b96a0dea644f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            [
+                "a695dbeff5ba4e35"
+            ]
+        ]
+    },
+    {
+        "id": "a695dbeff5ba4e35",
+        "type": "mqtt out",
+        "z": "e13b83c7368ba830",
+        "g": "22a4358ca5184029",
+        "name": "Local",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "57c4cff541230e44",
+        "x": 1110,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c7486c4dbb2692b9",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "a8eb5097c31188c5",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "76e9c342e92e1a92",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1874aafdd0637e5d",
+        "type": "inject",
+        "z": "e13b83c7368ba830",
+        "g": "82f3d4dde002607d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1030,
+        "y": 420,
+        "wires": [
+            [
+                "96285def216df1da"
+            ]
+        ]
+    },
+    {
+        "id": "df9af00c6baa5689",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "82f3d4dde002607d",
+        "name": "date ntp",
+        "func": "msg.payload = msg.payload + \"Z\";\nglobal.set('unixtime', msg.payload); \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 560,
+        "wires": [
+            [
+                "8899e5f89e40567d"
+            ]
+        ]
+    },
+    {
+        "id": "8899e5f89e40567d",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "82f3d4dde002607d",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "96285def216df1da",
+        "type": "moment",
+        "z": "e13b83c7368ba830",
+        "g": "82f3d4dde002607d",
+        "name": "",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": "0",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "YYYY-MM-DDTHH:mm:ss.000",
+        "locale": "fr-EU",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "ETC/UTC",
+        "x": 1060,
+        "y": 480,
+        "wires": [
+            [
+                "df9af00c6baa5689"
+            ]
+        ]
+    },
+    {
+        "id": "4142deb6febf1856",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Public",
+        "label": "Public",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5b8bb76d93487069",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Bot",
+        "label": "Bot",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0a3b27fd17e27642",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Emergency",
+        "label": "Emergency",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 770,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "1c9087e43fe02fc1",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "BlaBla",
+        "label": "BlaBla",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "d4a4e4bae405fc47",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Info",
+        "label": "Info",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "f4865337c0f89f7c",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Meteo",
+        "label": "Meteo",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "ff2db218a84d8416",
+        "type": "ui-text",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "group": "53771198aef5b14a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Test",
+        "label": "Test",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "28088ea40fd74a62",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "debug 68",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "745d2866de614e05",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "requet MC",
+        "func": "msg.query = `\nSELECT\n device_name,\n device_role,\n latitude,\n longitude,\n ts\nFROM meshcore_nodes\nWHERE latitude IS NOT NULL\nORDER BY ts DESC;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1460,
+        "wires": [
+            [
+                "62fcde37197af89b"
+            ]
+        ]
+    },
+    {
+        "id": "62fcde37197af89b",
+        "type": "postgresql",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "Postgres DB",
+        "query": "",
+        "postgreSQLConfig": "64f2d453b8bacbf7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 650,
+        "y": 1460,
+        "wires": [
+            [
+                "d285a222faf83d2d",
+                "8e4a09c901f60140"
+            ]
+        ]
+    },
+    {
+        "id": "d285a222faf83d2d",
+        "type": "function",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "MC bleu",
+        "func": "// msg.payload contient un tableau d'objets de la DB\nlet nodes = msg.payload.map(node => {\n    // conversion latitude/longitude si présentes\n    let lat = node.latitude ;\n    let lon = node.longitude ;\n\n    return {\n        name: node.device_name || node.from_id.toString(),\n        lat: lat,\n        lon: lon,\n        layer: node.device_role || \"UNKNOWN\",\n        icon: \"times\",\n        iconColor: \"#0000ff\",\n        tooltip: `<b>${node.device_name || \"\"}</b><br>${node.device_role || \"UNKNOWN\"}<br>Updated: ${node.ts}`\n    };\n});\n\n// On envoie tout dans msg.payload\nmsg.payload = nodes;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1460,
+        "wires": [
+            [
+                "7d4d06f2108b8159",
+                "worldmap-node"
+            ]
+        ]
+    },
+    {
+        "id": "8e4a09c901f60140",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "debug 70",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "7d4d06f2108b8159",
+        "type": "debug",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "debug 71",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "2d110d3b93df5806",
+        "type": "comment",
+        "z": "e13b83c7368ba830",
+        "g": "4720e4a7f45d6372",
+        "name": "",
+        "info": "127.0.0.1:1880/dashboard/page1\n\npermet de voir les messages en cours de diff",
+        "x": 110,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "18a9a1e715c20278",
+        "type": "comment",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "",
+        "info": "127.0.0.1:1880/worldmap\npermet de voir la carte noeud gps",
+        "x": 110,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "6431b05a3456e0c0",
+        "type": "worldmap in",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "",
+        "path": "/worldmap",
+        "events": "connect,disconnect,point,draw,layer,bounds,files,click,other",
+        "x": 180,
+        "y": 1460,
+        "wires": [
+            [
+                "28088ea40fd74a62",
+                "745d2866de614e05"
+            ]
+        ]
+    },
+    {
+        "id": "worldmap-node",
+        "type": "worldmap",
+        "z": "e13b83c7368ba830",
+        "g": "4340707a219690e8",
+        "name": "Map",
+        "lat": "46.616967",
+        "lon": "2.832792",
+        "zoom": "6.5",
+        "layer": "EsriC",
+        "cluster": "",
+        "maxage": "840",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,BU,RW,SN,TL,HM",
+        "maplist": "OSMG,OSMC,OSMH,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,HB,AN,ST,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1110,
+        "y": 1460,
+        "wires": []
+    }
+]

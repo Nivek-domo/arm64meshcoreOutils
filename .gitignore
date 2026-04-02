@@ -1,0 +1,46 @@
+# Fichiers de cache et temporaires
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node modules et dépendances npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers sensibles
+.env
+.env.local
+credentials.json
+*.key
+*.pem
+*.p12
+
+# Backups ssh/scp
+backup-*
+*.backup
+*-backup-*
+
+# Fichiers de conf système (ne pas tracker)
+/etc/postgresql/*
+/etc/mosquitto/*
+/etc/emqx/*
+
+# Résultats d'installation locaux
+install_run.log
+/opt/meshcore-decoder/dist/
+node_modules/.bin/
+
+# Dossiers utilisateur Node-RED (garder seulement la référence)
+.node-red-backup-*
+.node-red/
+!rpi3-trixie-installer/nodered/reference-opi66/
+
+# Fichiers sensibles RPi
+/home/pi/.node-red/flows.runtime.json
+/home/pi/.ssh/

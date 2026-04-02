@@ -1,0 +1,14 @@
+[Unit]
+Description=Node-RED Service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/.node-red
+ExecStart=/usr/bin/env node /usr/bin/node-red
+Restart=on-failure
+Environment=NODE_OPTIONS=--max-old-space-size=256
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,35 @@
+{
+    "nodes": [
+        {
+            "id": "1",
+            "type": "inject",
+            "z": "flow1",
+            "name": "Start",
+            "props": [],
+            "repeat": "",
+            "crontab": "",
+            "once": true,
+            "onceDelay": "0.1",
+            "topic": "",
+            "payload": "Hello, Node-RED!",
+            "payloadType": "str",
+            "x": 100,
+            "y": 100,
+            "wires": [["2"]]
+        },
+        {
+            "id": "2",
+            "type": "debug",
+            "z": "flow1",
+            "name": "Debug Output",
+            "active": true,
+            "tosidebar": true,
+            "tostatus": false,
+            "complete": "true",
+            "targetType": "full",
+            "x": 300,
+            "y": 100,
+            "wires": []
+        }
+    ]
+}
