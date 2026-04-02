@@ -1,204 +1,129 @@
 # 📡 Meshcore Installation Scripts
 
-Collection complète de scripts d'installation pour déployer une stack **Meshcore + Node-RED + PostgreSQL** sur ARM64 (Raspberry Pi, Orange Pi, etc.).
-
-> Deux versions disponibles : **EMQX** (avancé) ou **Mosquitto** (simple)
+Installation automatisée complète : **Mosquitto MQTT + Node-RED + PostgreSQL + meshcore-decoder** pour ARM64 (Raspberry Pi, Orange Pi, etc.).
 
 ---
 
-## 🎯 Choix rapide
-
-### Je veux une solution **simple et légère** ✅ → Mosquitto
-- Installation rapide (~10 min)
-- Configuration fichier simple
-- Consommation CPU/RAM minimale
-- **👉 Lire [README_MOSQUITTO.md](README_MOSQUITTO.md)**
-
-### Je veux une solution **avancée avec dashboard** → EMQX
-- Dashboard web complet (port 18083)
-- ACL et topics rewrite avancé
-- Gestion API complète
-- **👉 Lire [TUTORIEL_COMPLET.md](rpi3-trixie-installer/TUTORIEL_COMPLET.md)**
-
----
-
-## ⚡ Installation Mosquitto (5 min)
+## ⚡ Installation rapide (20 min)
 
 ```bash
-git clone https://github.com/[USERNAME]/scriptserveur.git
-cd scriptserveur
+git clone https://github.com/Nivek-domo/arm64meshcoreOutils.git
+cd arm64meshcoreOutils
 sudo ./install-meshcore-nodered-mosquitto.sh
 ```
 
-✅ Prêt ! Accédez à **http://localhost:1880** (Node-RED)
+✅ C'est tout ! Accédez à **http://localhost:1880** (Node-RED) après l'installation
 
 ---
 
-## 📦 Fichiers disponibles
+## 📦 Composants installés
 
-| Script | Stack | Utilisateurs |
-|--------|-------|--------------|
-| `install-meshcore-nodered-mosquitto.sh` | Mosquitto + Node-RED + PostgreSQL + meshcore-decoder | **Recommandé** |
-| `install-meshcore-nodered-v3.sh` | EMQX + Node-RED + PostgreSQL + meshcore-decoder | Avancé |
-| `install-meshcore-nodered-v2.sh` | Ancien (référence historique) | Historique |
-| `install-meshcore-nodered.sh` | Ancien (référence historique) | Historique |
+| Composant | Description |
+|-----------|-------------|
+| **Node.js 20.x** | Runtime JavaScript |
+| **PostgreSQL 17** | Base de données relationnelle |
+| **Mosquitto** | Broker MQTT léger |
+| **Node-RED** | Plateforme IoT/automation |
+| **meshcore-decoder** | Décodeur MeshCore |
+| **node-red-contrib-web-worldmap** | Carte mondiale interactive |
+| **node-red-contrib-postgresql** | Connecteur BD |
+| **@flowfuse/node-red-dashboard** | Dashboard UI |
 
 ---
 
-## 🌐 Accès post-installation
+## 🌐 Accès après installation
 
-| Service | URL | Identifiants |
-|---------|-----|--------------|
+| Service | Adresse | Identifiants |
+|---------|---------|--------------|
 | **Node-RED** | `http://192.168.X.X:1880` | Aucun |
-| **Mosquitto MQTT** | `mqtt://192.168.X.X:1883` | `meshuser` / `meshpass123` |
-| **PostgreSQL** | `192.168.X.X:5432` | `vpnuser` / `motdepassefort` |
+| **Mosquitto MQTT** | `mqtt://192.168.X.X:1883` | user: `meshuser` / pass: `meshpass123` |
+| **PostgreSQL** | `192.168.X.X:5432` | user: `vpnuser` / pass: `motdepassefort` |
 
 ---
 
-## 🚀 Marche à suivre pour vos copains
+## 🚀 Marche à suivre
 
 ### Prérequis
 - ✅ Raspberry Pi 3B+/4 ou Orange Pi Zero 2W (ARM64)
-- ✅ Debian 12 Bookworm ou Debian 13 Trixie
-- ✅ Accès SSH ou écran
-- ✅ Connexion réseau
+- ✅ Debian 12/13 ou Ubuntu 22.04 LTS
+- ✅ Accès SSH/écran + connexion réseau
 
-### Étapes
+### Installation
 
-1. **Se connecter en SSH**
+1. **Se connecter à la machine**
    ```bash
-   ssh pi@<IP_DE_VOTRE_RASPBERRY>
+   ssh pi@<IP_RASPBERRY>
    # ou
    ssh orangepi@<IP_OPI>
    ```
 
-2. **Télécharger le script**
+2. **Cloner et installer**
    ```bash
-   cd /home/pi  # ou /home/orangepi
-   git clone https://github.com/[USERNAME]/scriptserveur.git
-   cd scriptserveur
-   ```
-
-3. **Lancer l'installation**
-   ```bash
-   # Avec paramètres par défaut
+   git clone https://github.com/Nivek-domo/arm64meshcoreOutils.git
+   cd arm64meshcoreOutils
    sudo ./install-meshcore-nodered-mosquitto.sh
-   
-   # Ou personnaliser
-   sudo env MOSQUITTO_USER="custom" MOSQUITTO_PASSWORD="pass123" \
-     bash ./install-meshcore-nodered-mosquitto.sh
    ```
 
-4. **Attendre ~15-20 minutes** ☕
+3. **Attendre 20-25 minutes** ☕
    - Installation des dépendances
    - Compilation de meshcore-decoder
-   - Démarrage des services
+   - Création de la base de données
 
-5. **Vérifier l'installation**
+4. **Vérifier que c'est bon**
    ```bash
-   # Voir l'état des services
    systemctl status mosquitto nodered postgresql
-   
-   # Test rapide
-   curl http://localhost:1880
-   mosquitto_sub -h localhost -u meshuser -P meshpass123 -t msh/#
    ```
 
-6. **Accédez à Node-RED**
-   - Browser → `http://192.168.X.X:1880`
-   - Importer vos flows depuis l'UI
+5. **Accéder à Node-RED**
+   - Ouvrir dans le navigateur : **http://192.168.X.X:1880**
+   - C'est prêt ! 🎉
 
 ---
 
-## 🔧 Paramétrage courant
+## 🔧 Personnalisation
 
 ### Changer les identifiants MQTT
 ```bash
-# Ajouter/modifier un utilisateur
-sudo mosquitto_passwd -b /etc/mosquitto/passwd <user> <password>
-
-# Redémarrer
+sudo mosquitto_passwd -b /etc/mosquitto/passwd mon_user mon_password
 sudo systemctl restart mosquitto
 ```
 
 ### Ajouter une ACL personnalisée
-Éditer `/etc/mosquitto/acl.conf` :
-```
-user mon_utilisateur
-  topic read recette/donnees/#
-  topic write commande/action/#
-```
-
-Puis redémarrer :
+Éditer `/etc/mosquitto/acl.conf` puis redémarrer :
 ```bash
 sudo systemctl restart mosquitto
 ```
 
 ### Vérifier PostgreSQL
 ```bash
-PGPASSWORD='motdepassefort' psql -h localhost -U vpnuser -d postgres \
-  -c "SELECT COUNT(*) FROM meshcore_nodes;"
+PGPASSWORD='motdepassefort' psql -h localhost -U vpnuser -d postgres -c "SELECT 1;"
 ```
 
 ---
 
-## 🐛 Problèmes courants
+## 🐛 Dépannage rapide
 
-| Symptôme | Cause | Solution |
-|----------|-------|----------|
-| Node-RED ne démarre pas | Port 1880 occupé | `sudo lsof -i :1880` → kill le processus |
-| Mosquitto refuse la connexion | User/pass erroné | Vérifier avec `mosquitto_passwd -b` |
-| PostgreSQL `permission denied` | Bug déjà corrigé dans le script | Relancer le script ou faire les GRANT manuellement |
-| Lent à installer | Normal sur RPi | Attendre ~20 min + 5 min de compil meshcore-decoder |
+```bash
+# Node-RED ne répond pas ?
+sudo systemctl restart nodered
+journalctl -u nodered -n 50 --no-pager
 
----
+# Mosquitto bloqué ?
+sudo systemctl restart mosquitto
 
-## 📚 Documentation complète
-
-- **Node-RED** : https://nodered.org/docs/
-- **Mosquitto** : https://mosquitto.org/man/mosquitto-8.html
-- **PostgreSQL** : https://www.postgresql.org/docs/
-- **meshcore-decoder** : https://github.com/michaelhart/meshcore-decoder
+# Test rapid MQTT
+mosquitto_sub -h localhost -u meshuser -P meshpass123 -t msh/#
+```
 
 ---
 
-## 🆘 Support
+## 📚 Documentation
 
-En cas de problème :
-
-1. **Lire les logs** :
-   ```bash
-   journalctl -u nodered -n 100 --no-pager
-   journalctl -u mosquitto -n 100 --no-pager
-   ```
-
-2. **Partager les erreurs** sur GitHub Issues avec :
-   - Output de `systemctl status <service>`
-   - Dernières lignes de journalctl
-   - Version de Debian/ARM (`cat /etc/os-release`)
-
-3. **Reset complet** (si tout est cassé) :
-   ```bash
-   # Arrêter les services
-   sudo systemctl stop nodered mosquitto postgresql
-   
-   # Réinitialiser
-   sudo rm -rf /home/pi/.node-red
-   sudo /etc/init.d/postgresql restart
-   
-   # Relancer le script
-   sudo ./install-meshcore-nodered-mosquitto.sh
-   ```
+- [Mosquitto guide](README_MOSQUITTO.md)
+- [Node-RED docs](https://nodered.org/docs/)
+- [PostgreSQL docs](https://www.postgresql.org/docs/)
+- [meshcore-decoder](https://github.com/michaelhart/meshcore-decoder)
 
 ---
 
-## 📝 Versions
-
-- **Mosquitto v1.0** : Version légère recommandée (Avril 2026)
-- **EMQX v3** : Version avancée (Avril 2026)
-- **Plus anciennes** : Voir branches Git (v1, v2)
-
----
-
-**Repository créé :** Avril 2026  
-**Mainteneur :** @Nivek
+**Créé :** Avril 2026 | **Auteur :** Nivek-domo
