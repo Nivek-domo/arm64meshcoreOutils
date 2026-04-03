@@ -29,6 +29,8 @@ DB_PORT=5432
 MOSQUITTO_USER="${MOSQUITTO_USER:-meshuser}"
 MOSQUITTO_PASSWORD="${MOSQUITTO_PASSWORD:-meshpass123}"
 MOSQUITTO_ACL_FILE="${MOSQUITTO_ACL_FILE:-/etc/mosquitto/acl.conf}"
+MOSQUITTO_PASSWORD_FILE="${MOSQUITTO_PASSWORD_FILE:-/etc/mosquitto/passwd}"
+MOSQUITTO_CONF_FILE="${MOSQUITTO_CONF_FILE:-/etc/mosquitto/conf.d/meshcore.conf}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 NODERED_STRICT_CLONE="${NODERED_STRICT_CLONE:-1}"
 
@@ -55,43 +57,27 @@ log_error() {
 }
 
 configure_mosquitto_acl() {
-    log_info "Configuration des ACL Mosquitto..."
-    
-    mkdir -p "$(dirname "${MOSQUITTO_ACL_FILE}")"
-    cat > "${MOSQUITTO_ACL_FILE}" << 'MOSQUITTO_ACL'
-# ACL par défaut
-user meshuser
-topic readwrite msh/#
-topic readwrite Traitement/#
-topic readwrite Filtre/#
-
-# Admin local
-user admin
-topic readwrite #
-MOSQUITTO_ACL
-
-    chown mosquitto:mosquitto "${MOSQUITTO_ACL_FILE}"
-    chmod 600 "${MOSQUITTO_ACL_FILE}"
+    log_info "ACL Mosquitto désactivée : authentification simple user/mot de passe"
 }
 
 configure_mosquitto_conf() {
     log_info "Configuration de mosquitto.conf..."
-    
-    cat >> /etc/mosquitto/mosquitto.conf << 'MOSQUITTO_CONF'
 
+    mkdir -p "$(dirname "${MOSQUITTO_CONF_FILE}")"
+
+    # Remove the legacy block previously appended to mosquitto.conf on reruns.
+    if grep -q '^# Configuration ajoutée par install-meshcore-nodered-mosquitto.sh$' /etc/mosquitto/mosquitto.conf; then
+        sed -i '/^# Configuration ajoutée par install-meshcore-nodered-mosquitto.sh$/,$d' /etc/mosquitto/mosquitto.conf
+    fi
+
+    cat > "${MOSQUITTO_CONF_FILE}" << MOSQUITTO_CONF
 # Configuration ajoutée par install-meshcore-nodered-mosquitto.sh
 listener 1883
 protocol mqtt
 
-# Allow anonymous connections (default for Mosquitto)
-# Uncomment line below to disable anonymous connections:
-# allow_anonymous false
-
-# Password file for authentication
-password_file /etc/mosquitto/passwd
-
-# ACL file
-acl_file /etc/mosquitto/acl.conf
+# Authentication
+allow_anonymous false
+password_file ${MOSQUITTO_PASSWORD_FILE}
 
 # Persistence
 persistence true
@@ -105,20 +91,26 @@ log_dest file /var/log/mosquitto/mosquitto.log
 log_dest syslog
 log_type all
 MOSQUITTO_CONF
+
+    chown root:root "${MOSQUITTO_CONF_FILE}"
+    chmod 644 "${MOSQUITTO_CONF_FILE}"
 }
 
 setup_mosquitto_users() {
     log_info "Configuration des utilisateurs Mosquitto..."
     
-    # Create password file
-    touch /etc/mosquitto/passwd
-    chown mosquitto:mosquitto /etc/mosquitto/passwd
-    chmod 600 /etc/mosquitto/passwd
+    # Create the password file as root for mosquitto_passwd, then hand it back to mosquitto.
+    touch "${MOSQUITTO_PASSWORD_FILE}"
+    chown root:root "${MOSQUITTO_PASSWORD_FILE}"
+    chmod 600 "${MOSQUITTO_PASSWORD_FILE}"
     
     # Add users using mosquitto_passwd
     # Note: mosquitto_passwd needs -b flag for batch mode
-    mosquitto_passwd -b /etc/mosquitto/passwd "${MOSQUITTO_USER}" "${MOSQUITTO_PASSWORD}"
-    mosquitto_passwd -b /etc/mosquitto/passwd admin admin123
+    mosquitto_passwd -b "${MOSQUITTO_PASSWORD_FILE}" "${MOSQUITTO_USER}" "${MOSQUITTO_PASSWORD}"
+    mosquitto_passwd -b "${MOSQUITTO_PASSWORD_FILE}" admin admin123
+
+    chown mosquitto:mosquitto "${MOSQUITTO_PASSWORD_FILE}"
+    chmod 600 "${MOSQUITTO_PASSWORD_FILE}"
 }
 
 setup_nodered_systemd_service() {
@@ -236,6 +228,124 @@ restore_nodered_reference_bundle() {
         sudo -u "${NODERED_USER}" bash -lc "cd '${nodered_dir}' && npm ci --omit=dev"
     elif [ -f "${nodered_dir}/package.json" ]; then
         sudo -u "${NODERED_USER}" bash -lc "cd '${nodered_dir}' && npm install --omit=dev"
+    fi
+}
+
+configure_nodered_local_mqtt() {
+    local nodered_dir="/home/${NODERED_USER}/.node-red"
+    local flows_file="${nodered_dir}/flows.json"
+
+    if [ ! -f "${flows_file}" ]; then
+        log_warn "Flow Node-RED introuvable, configuration MQTT locale ignorée"
+        return 0
+    fi
+
+    log_info "Synchronisation des credentials MQTT Node-RED..."
+
+    sudo -u "${NODERED_USER}" env \
+        NODERED_DIR="${nodered_dir}" \
+        MQTT_USER="${MOSQUITTO_USER}" \
+        MQTT_PASSWORD="${MOSQUITTO_PASSWORD}" \
+        node <<'NODE_RED_MQTT'
+const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
+
+const noderedDir = process.env.NODERED_DIR;
+const mqttUser = process.env.MQTT_USER;
+const mqttPassword = process.env.MQTT_PASSWORD;
+
+const flowsPath = path.join(noderedDir, "flows.json");
+const credsPath = path.join(noderedDir, "flows_cred.json");
+const runtimePath = path.join(noderedDir, ".config.runtime.json");
+const localHosts = new Set(["127.0.0.1", "localhost", "::1"]);
+
+function encryptCredentials(secret, credentials) {
+    const initVector = crypto.randomBytes(16);
+    const key = crypto.createHash("sha256").update(secret).digest();
+    const cipher = crypto.createCipheriv("aes-256-ctr", key, initVector);
+    return {
+        $: initVector.toString("hex") + cipher.update(JSON.stringify(credentials), "utf8", "base64") + cipher.final("base64")
+    };
+}
+
+function decryptCredentials(secret, credentials) {
+    const key = crypto.createHash("sha256").update(secret).digest();
+    const initVector = Buffer.from(credentials.$.substring(0, 32), "hex");
+    const payload = credentials.$.substring(32);
+    const decipher = crypto.createDecipheriv("aes-256-ctr", key, initVector);
+    return JSON.parse(decipher.update(payload, "base64", "utf8") + decipher.final("utf8"));
+}
+
+const flows = JSON.parse(fs.readFileSync(flowsPath, "utf8"));
+const localBrokerIds = [];
+let flowsChanged = false;
+
+for (const node of flows) {
+    if (node.type === "mqtt-broker" && (node.name === "local" || localHosts.has(String(node.broker)))) {
+        if (String(node.broker) !== "127.0.0.1") {
+            node.broker = "127.0.0.1";
+            flowsChanged = true;
+        }
+        if (String(node.port) !== "1883") {
+            node.port = "1883";
+            flowsChanged = true;
+        }
+        localBrokerIds.push(node.id);
+    }
+}
+
+if (flowsChanged) {
+    fs.writeFileSync(flowsPath, JSON.stringify(flows, null, 4) + "\n");
+}
+
+if (localBrokerIds.length === 0) {
+    process.exit(0);
+}
+
+let runtimeConfig = {};
+let credentialSecret = null;
+if (fs.existsSync(runtimePath)) {
+    runtimeConfig = JSON.parse(fs.readFileSync(runtimePath, "utf8"));
+    if (typeof runtimeConfig._credentialSecret === "string" && runtimeConfig._credentialSecret.length > 0) {
+        credentialSecret = runtimeConfig._credentialSecret;
+    }
+}
+
+let credentials = {};
+if (fs.existsSync(credsPath)) {
+    const storedCredentials = JSON.parse(fs.readFileSync(credsPath, "utf8"));
+    if (storedCredentials && typeof storedCredentials === "object") {
+        if (storedCredentials.$) {
+            if (!credentialSecret) {
+                throw new Error("Impossible de dechiffrer flows_cred.json sans _credentialSecret");
+            }
+            credentials = decryptCredentials(credentialSecret, storedCredentials);
+        } else {
+            credentials = storedCredentials;
+        }
+    }
+}
+
+for (const brokerId of localBrokerIds) {
+    credentials[brokerId] = {
+        ...(credentials[brokerId] || {}),
+        user: mqttUser,
+        password: mqttPassword
+    };
+}
+
+const serializedCredentials = credentialSecret
+    ? encryptCredentials(credentialSecret, credentials)
+    : credentials;
+
+fs.writeFileSync(credsPath, JSON.stringify(serializedCredentials, null, 4) + "\n");
+NODE_RED_MQTT
+
+    chown "${NODERED_USER}:${NODERED_USER}" "${nodered_dir}/flows.json"
+    if [ -f "${nodered_dir}/flows_cred.json" ]; then
+        chown "${NODERED_USER}:${NODERED_USER}" "${nodered_dir}/flows_cred.json"
+        chmod 600 "${nodered_dir}/flows_cred.json"
     fi
 }
 
@@ -425,7 +535,7 @@ fi
 
 log_warn "Mosquitto broker: mqtt://localhost:1883"
 log_warn "Utilisateur par défaut: ${MOSQUITTO_USER} / ${MOSQUITTO_PASSWORD}"
-log_warn "ACL configurée dans: ${MOSQUITTO_ACL_FILE}"
+log_warn "Mosquitto configuré sans ACL spécifique"
 
 # ============================================================================
 # 5. INSTALLATION NODE-RED
@@ -451,6 +561,7 @@ npm install -g \
 log_info "Setup Node-RED comme service systemd..."
 setup_nodered_systemd_service
 restore_nodered_reference_bundle
+configure_nodered_local_mqtt
 systemctl restart nodered
 
 log_warn "Attente du démarrage de Node-RED (15s)..."
