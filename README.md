@@ -36,6 +36,8 @@ sudo ./install-meshcore-nodered-mosquitto.sh
 | Service | Adresse | Identifiants |
 |---------|---------|--------------|
 | **Node-RED** | `http://192.168.X.X:1880` | Aucun |
+| **Messages reçus (Dashboard)** | `http://192.168.X.X:1880/dashboard/page1` | Aucun |
+| **Carte (Worldmap)** | `http://192.168.X.X:1880/worldmap/` | Aucun |
 | **Mosquitto MQTT** | `mqtt://192.168.X.X:1883` | user: `meshuser` / pass: `meshpass123` |
 | **PostgreSQL** | `192.168.X.X:5432` | user: `vpnuser` / pass: `motdepassefort` |
 
@@ -76,6 +78,8 @@ sudo ./install-meshcore-nodered-mosquitto.sh
 
 5. **Accéder à Node-RED**
    - Ouvrir dans le navigateur : **http://192.168.X.X:1880**
+   - Messages reçus : **http://192.168.X.X:1880/dashboard/page1**
+   - Carte : **http://192.168.X.X:1880/worldmap/**
    - C'est prêt ! 🎉
 
 ---
