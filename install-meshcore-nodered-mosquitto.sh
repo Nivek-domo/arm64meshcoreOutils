@@ -79,17 +79,8 @@ protocol mqtt
 allow_anonymous false
 password_file ${MOSQUITTO_PASSWORD_FILE}
 
-# Persistence
-persistence true
-persistence_location /var/lib/mosquitto/
-
 # Max message size (10 MB for large packets)
 max_packet_size 10485760
-
-# Logging
-log_dest file /var/log/mosquitto/mosquitto.log
-log_dest syslog
-log_type all
 MOSQUITTO_CONF
 
     chown root:root "${MOSQUITTO_CONF_FILE}"
@@ -680,7 +671,7 @@ log_info "- Installez les nodes si nécessaire (Manage Palette)"
 log_info "- Connectez-vous au broker MQTT local (localhost:1883)"
 log_info ""
 log_info "Commandes utiles:"
-log_info "- Test MQTT: mosquitto_sub -h localhost -u ${MOSQUITTO_USER} -P '${MOSQUITTO_PASSWORD}' -t msh/#"
+log_info "- Test MQTT: mosquitto_sub -h localhost -u ${MOSQUITTO_USER} -P '${MOSQUITTO_PASSWORD}' -t meshcore/#"
 log_info "- Redémarrer Mosquitto: systemctl restart mosquitto"
 log_info "- Redémarrer Node-RED: systemctl restart nodered"
 log_info "- Logs Node-RED: journalctl -u nodered -n 100"
