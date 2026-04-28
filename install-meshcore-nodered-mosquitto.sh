@@ -563,35 +563,9 @@ sleep 15
 # ============================================================================
 
 log_info "=== Étape 6 : Installation meshcore-decoder ==="
-DECODER_DIR="/opt/meshcore-decoder"
 
-if [ ! -d "${DECODER_DIR}/.git" ]; then
-    log_info "Clonage du dépôt meshcore-decoder..."
-    rm -rf /opt/meshcore-decoder 2>/dev/null || true
-    cd /opt
-    git clone https://github.com/michaelhart/meshcore-decoder.git
-else
-    log_info "Mise à jour du dépôt meshcore-decoder..."
-    cd ${DECODER_DIR}
-    git pull origin main || true
-fi
-
-cd ${DECODER_DIR}
-
-log_info "Installation des dépendances..."
-npm install
-
-log_info "Installation de @noble/ed25519@2.0.0 (compatible Node 20)..."
-npm install '@noble/ed25519@2.0.0'
-
-log_info "Compilation du projet..."
-npm run build
-
-# Créer lien symlink global
-rm -f /usr/local/bin/meshcore-decoder 2>/dev/null || true
-ln -s ${DECODER_DIR}/dist/cli.js /usr/local/bin/meshcore-decoder
-chmod +x ${DECODER_DIR}/dist/cli.js
-chmod +x /usr/local/bin/meshcore-decoder
+log_info "Installation de meshcore-decoder depuis le fork Nivek-domo..."
+npm install -g 'github:Nivek-domo/meshcore-decoder#feature/grouptext-2byte-hash-auto'
 
 log_info "Test meshcore-decoder..."
 meshcore-decoder --version

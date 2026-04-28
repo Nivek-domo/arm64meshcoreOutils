@@ -68,7 +68,7 @@ sudo ./install-meshcore-nodered-mosquitto.sh
 
 3. **Attendre 20-25 minutes** ☕
    - Installation des dépendances
-   - Compilation de meshcore-decoder
+   - Installation de meshcore-decoder depuis le fork GitHub
    - Création de la base de données
 
 4. **Vérifier que c'est bon**
@@ -84,7 +84,28 @@ sudo ./install-meshcore-nodered-mosquitto.sh
 
 ---
 
-## 🔧 Personnalisation
+## Mise à jour meshcore-decoder
+
+Le projet utilise maintenant le fork Nivek-domo du meshcore-decoder avec support du texte de groupe 2-byte hash.
+
+### Installation manuelle
+```bash
+# Depuis la branche feature
+npm install -g github:Nivek-domo/meshcore-decoder#feature/grouptext-2byte-hash-auto
+
+# Ou version figée sur un commit spécifique
+npm install -g github:Nivek-domo/meshcore-decoder#f139fb6
+```
+
+### Vérification
+```bash
+meshcore-decoder --help
+meshcore-decoder --version
+```
+
+---
+
+## Personnalisation
 
 ### Changer les identifiants MQTT
 ```bash
@@ -126,7 +147,7 @@ mosquitto_sub -h localhost -u meshuser -P meshpass123 -t msh/#
 - [Mosquitto guide](README_MOSQUITTO.md)
 - [Node-RED docs](https://nodered.org/docs/)
 - [PostgreSQL docs](https://www.postgresql.org/docs/)
-- [meshcore-decoder](https://github.com/michaelhart/meshcore-decoder)
+- [meshcore-decoder (fork Nivek-domo)](https://github.com/Nivek-domo/meshcore-decoder) - branche feature/grouptext-2byte-hash-auto
 
 ---
 
