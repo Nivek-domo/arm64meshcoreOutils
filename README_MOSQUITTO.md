@@ -65,7 +65,23 @@ sudo env \
 | **PostgreSQL** | 17 | Base de données relationnelle |
 | **Mosquitto** | latest | Broker MQTT léger |
 | **Node-RED** | latest | Plateforme IoT/automation |
-| **meshcore-decoder** | v0.3.0+ | Décodeur MeshCore |
+| **meshcore-decoder** | fork GitHub Nivek-domo | Décodeur MeshCore avec support grouptext 2-byte hash |
+
+### Mise à jour meshcore-decoder
+
+Le projet utilise le fork Nivek-domo du meshcore-decoder.
+
+```bash
+# Installation globale recommandée
+npm install -g github:Nivek-domo/meshcore-decoder#feature/grouptext-2byte-hash-auto
+
+# Ou version figée sur un commit
+npm install -g github:Nivek-domo/meshcore-decoder#f139fb6
+
+# Vérification
+meshcore-decoder --help
+meshcore-decoder --version
+```
 
 ### Palettes Node-RED incluses
 - `@flowfuse/node-red-dashboard` : Dashboard UI
